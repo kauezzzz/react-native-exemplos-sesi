@@ -6,7 +6,7 @@ import ChecaNumero from './components/ChecaNumero';
 export default class App extends React.Component {
 render() {
   return (
-  <ChecaNumero numero={3} />
+  <ChecaNumero numero={5} />
   );
   }
   }
