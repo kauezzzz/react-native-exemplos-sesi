@@ -2,29 +2,27 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 export default props => {
-  return (
+return (
     <View style={estilos.container}>
-      <Text style={[estilos.texto, props.numero % 2 !== 0 && estilos.bordaVermelha]}>
-        {props.numero % 2 === 0 ? 'O número é par!' : 'O número é ímpar!'}
-      </Text>
+    {
+    props.numero % 2 == 0
+    ? <Text style={estilos.texto}>O número é par!</Text>
+    : <Text style={estilos.texto}>O número é ímpar!</Text>
+    }
     </View>
-  )
-}
-
-const estilos = StyleSheet.create({
-  container: {
+    )
+    }
+    const estilos = StyleSheet.create({
+    container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  texto: {
+    },
+    texto: {
     fontSize: 18,
     fontWeight: 'bold',
-    padding: 10
-  },
-  bordaVermelha: {
     borderWidth: 2,
-    borderColor: 'red', // Cor da borda vermelha
-  }
-});
+    borderColor: 'red', padding: 10
+    }
+    });
